@@ -1,0 +1,2 @@
+libstream
+简单的封装了ffmpeg使开发者不必了解ffmpeg的详细使用,简化了开发难度
