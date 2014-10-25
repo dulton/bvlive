@@ -88,5 +88,20 @@
 3rdparty/ffmpeg/tools/uncoded_frame
 3rdparty/ffmpeg/tools/zmqsend
 
+3rdparty/jansson/Makefile
+3rdparty/jansson/config.h
+3rdparty/jansson/config.log
+3rdparty/jansson/config.status
+3rdparty/jansson/doc/Makefile
+3rdparty/jansson/libtool
+3rdparty/jansson/src/Makefile
+3rdparty/jansson/src/jansson_config.h
+3rdparty/jansson/src/libjansson.la
+3rdparty/jansson/stamp-h1
+3rdparty/jansson/test/Makefile
+3rdparty/jansson/test/bin/Makefile
+3rdparty/jansson/test/suites/Makefile
+3rdparty/jansson/test/suites/api/Makefile
+
 .svn/
 tags
