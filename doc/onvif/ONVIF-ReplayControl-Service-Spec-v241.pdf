@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head"><title>
+	Home
+</title><meta http-equiv="X-UA-Compatible" content="IE=9" /><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Home" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2014 ONVIF." /><meta id="MetaAuthor" name="AUTHOR" content="ONVIF" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/Portals/_default/default.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/DesktopModules/Knowledgebase/module.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/onvif/skin.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/onvif_Cont/container.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/onvif_containers/container.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/onvif_cont-new/container.css?cdv=33" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=33" type="text/css" rel="stylesheet"/><script src="/Resources/Shared/Scripts/jquery/jquery.min.js?cdv=33" type="text/javascript"></script><script src="/Resources/Shared/Scripts/jquery/jquery-ui.min.js?cdv=33" type="text/javascript"></script><link rel='SHORTCUT ICON' href='/Portals/0/favicon.ico' type='image/x-icon' />     
+        
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-12928714-7']);
+			      _gaq.push(['_trackPageview']);
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+        
+		  <link type="text/css" rel="stylesheet" href="http://www.google.com/cse/api/branding.css" /></head>
+<body id="Body">
+    
+    <form name="cse-search-box" method="post" action="/home.aspx?404;http://www.onvif.org:80/specs/srv/replay/ONVIF-ReplayControl-Service-Spec-v241.pdf" id="cse-search-box" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDMwNzQ0NDU3D2QWCGYPFgIeBFRleHQFeTwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4wIFRyYW5zaXRpb25hbC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi94aHRtbDEvRFREL3hodG1sMS10cmFuc2l0aW9uYWwuZHRkIj5kAgIPFgIfAAVDIHhtbDpsYW5nPSJlbi1VUyIgbGFuZz0iZW4tVVMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sImQCBA9kFg4CBg8WAh4HVmlzaWJsZWhkAgcPFgIeB2NvbnRlbnQFBEhvbWVkAggPFgQfAmQfAWhkAgkPFgIfAgUVQ29weXJpZ2h0IDIwMTQgT05WSUYuZAIKDxYEHwJkHwFoZAILDxYCHwIFBU9OVklGZAIODxYCHwIFDUlOREVYLCBGT0xMT1dkAgYPZBYCAgEPZBYCAgcPZBYCZg9kFhRmD2QWAmYPFgIeBWNsYXNzBTVEbm5Nb2R1bGUgRG5uTW9kdWxlLUxpYmVydHl0ZWNHQ1NTZWFyY2ggRG5uTW9kdWxlLTQ5NhYCAgEPZBYCAgEPZBYCAgEPD2QWAh8DBShETk5Nb2R1bGVDb250ZW50IE1vZExpYmVydHl0ZWNHQ1NTZWFyY2hDFgICAQ9kFgJmD2QWDgIBDxYCHwAFITAxNDUxNzk3MzcwMjE5NTgyNDUxMDp4dmlwdGxzcWFiYWQCAw8WAh8ABQdGT1JJRDo5ZAIFDxYCHwAFGC9Ib21lL1NlYXJjaHJlc3VsdHMuYXNweGQCCQ8WAh8ABYMBPGlucHV0IHR5cGU9InRleHQiIG5hbWU9InEiIGlkPSJxIiBzdHlsZT0id2lkdGg6MjAwcHg7IiBvbmtleWRvd249InJldHVybiBfX2Rubl9LZXlEb3duKCcxMycsICdqYXZhc2NyaXB0OnNlYXJjaFNpdGUoKScsIGV2ZW50KTsiLz5kAgsPFgIfAAVHPGlucHV0IHR5cGU9ImJ1dHRvbiIgbmFtZT0ic2EiIG9uY2xpY2s9InNlYXJjaFNpdGUoKSIgdmFsdWU9IlNlYXJjaCIgLz5kAg0PFgIfAWhkAg8PFgIfAGVkAgIPZBYGZg8WAh8DBS9Ebm5Nb2R1bGUgRG5uTW9kdWxlLUtub3dsZWRnZWJhc2UgRG5uTW9kdWxlLTc1NRYCAgEPZBYEAgMPZBYCAgIPFgIfAWhkAgUPZBYCAgEPD2QWAh8DBSJETk5Nb2R1bGVDb250ZW50IE1vZEtub3dsZWRnZWJhc2VDFgICAQ9kFgZmDw8WBh4LTmF2aWdhdGVVcmwFTmphdmFzY3JpcHQ6cG9wVXAoJyZtb2R1bGVpZD03NTUmVGVtcFNvdXJjZURpcj0vRGVza3RvcE1vZHVsZXMvS25vd2xlZGdlYmFzZScpOx8ABRNBZG1pbmlzdGVyIExpc3RpbmdzHwFoZGQCAQ8PFgQfAAUTQWRtaW5pc3RlciBMaXN0aW5ncx8BaGRkAgIPZBYCZg8PFg4eC0FydGljbGVQYWdlZh4IQmxvZ1BhZ2VmHgZQUlBhZ2UCbh4KUFJNb2R1bGVJRALnAx4EdHlwZQICHgVjb3VudAIDHgN1cmwFIWh0dHA6Ly93d3cub252aWYub3JnL0RlZmF1bHQuYXNweGQWBAIBDxYCHwFoZAIDDzwrAA0BAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAIDZBYCZg9kFgpmDw8WAh8BaGRkAgEPZBYCZg9kFgYCAw8PFgIfAAUCOTBkZAIFDw8WBB8ABUlPTlZJRiB0byBFeGhpYml0IGF0IDYwdGggQW5udWFsIEFTSVMgSW50ZXJuYXRpb25hbCBTZW1pbmFyIGFuZCBFeGhpYml0aW9uHwQFXGh0dHA6Ly93d3cub252aWYub3JnL0RlZmF1bHQuYXNweD9Db250ZW50dHlwZT1BcnRpY2xlRGV0JnRhYklEPTExMCZtb2R1bGVJZD00ODcmQWlkPTkwJlBSPVBSZGQCBw8PFgQfAAUMIC0gOS8xNi8yMDE0HwFoZGQCAg9kFgJmD2QWBgIDDw8WAh8ABQI4OWRkAgUPDxYEHwAFKk9OVklGIEdyb3dzIFdpdGggTWVtYmVycyBvbiBTaXggQ29udGluZW50cx8EBVxodHRwOi8vd3d3Lm9udmlmLm9yZy9EZWZhdWx0LmFzcHg/Q29udGVudHR5cGU9QXJ0aWNsZURldCZ0YWJJRD0xMTAmbW9kdWxlSWQ9NDg3JkFpZD04OSZQUj1QUmRkAgcPDxYEHwAFDCAtIDkvMTEvMjAxNB8BaGRkAgMPZBYCZg9kFgYCAw8PFgIfAAUCODhkZAIFDw8WBB8ABVNPTlZJRiB0byBIb3N0IFB1YmxpYyBJbnRlcm9wZXJhYmlsaXR5IERlbW9uc3RyYXRpb24gYW5kIFJlY2VwdGlvbiBhdCBTZWN1cml0eSBFc3Nlbh8EBVxodHRwOi8vd3d3Lm9udmlmLm9yZy9EZWZhdWx0LmFzcHg/Q29udGVudHR5cGU9QXJ0aWNsZURldCZ0YWJJRD0xMTAmbW9kdWxlSWQ9NDg3JkFpZD04OCZQUj1QUmRkAgcPDxYEHwAFCyAtIDkvOS8yMDE0HwFoZGQCBA8PFgIfAWhkZAIBDxYCHwMFKkRubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTc1MBYCAgEPZBYEAgMPZBYCAgIPFgIfAWhkAgUPZBYCAgEPD2QWAh8DBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAICDxYCHwMFKkRubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTc5MBYCAgEPZBYEAgMPZBYCAgIPFgIfAWhkAgUPZBYCAgEPD2QWAh8DBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIDD2QWAmYPFgIfAwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNzQ4FgICAQ9kFgICAQ9kFgICAQ8PZBYCHwMFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgQPFgIfAwUMRE5ORW1wdHlQYW5lZAIFDxYCHwMFDEROTkVtcHR5UGFuZWQCBg8WAh8DBQxETk5FbXB0eVBhbmVkAgcPZBYCZg8WAh8DBSpEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS03NTEWAgIBD2QWAgIBD2QWAgIBDw9kFgIfAwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCCA9kFgJmDxYCHwMFKkRubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTc1MhYCAgEPZBYCAgEPZBYCAgEPD2QWAh8DBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIJD2QWAmYPFgIfAwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNzUzFgICAQ9kFgICAQ9kFgICAQ8PZBYCHwMFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgwPZBYEZg8PFgoeCENzc0NsYXNzBQVMT0dJTh8ABQVMb2dpbh4HVG9vbFRpcAUFTG9naW4fBAWhAWh0dHA6Ly93d3cub252aWYub3JnL2xvZ2luLmFzcHg/UmV0dXJuVXJsPSUyZmhvbWUuYXNweCUzZjQwNCUzYmh0dHAlM2ElMmYlMmZ3d3cub252aWYub3JnJTNhODAlMmZzcGVjcyUyZnNydiUyZnJlcGxheSUyZk9OVklGLVJlcGxheUNvbnRyb2wtU2VydmljZS1TcGVjLXYyNDEucGRmHgRfIVNCAgIWAh4Hb25jbGljawX9AXJldHVybiBkbm5Nb2RhbC5zaG93KCdodHRwOi8vd3d3Lm9udmlmLm9yZy9sb2dpbi5hc3B4P1JldHVyblVybD0lMjUyZmhvbWUuYXNweCUyNTNmNDA0JTI1M2JodHRwJTI1M2ElMjUyZiUyNTJmd3d3Lm9udmlmLm9yZyUyNTNhODAlMjUyZnNwZWNzJTI1MmZzcnYlMjUyZnJlcGxheSUyNTJmT05WSUYtUmVwbGF5Q29udHJvbC1TZXJ2aWNlLVNwZWMtdjI0MS5wZGYmcG9wVXA9dHJ1ZScsLypzaG93UmV0dXJuKi90cnVlLDMwMCw2NTAsdHJ1ZSwnJylkAgIPFgIfAWgWAgIBDw8WCh8OBQVMT0dJTh8ABQVMb2dpbh8PBQVMb2dpbh8EBaEBaHR0cDovL3d3dy5vbnZpZi5vcmcvbG9naW4uYXNweD9SZXR1cm5Vcmw9JTJmaG9tZS5hc3B4JTNmNDA0JTNiaHR0cCUzYSUyZiUyZnd3dy5vbnZpZi5vcmclM2E4MCUyZnNwZWNzJTJmc3J2JTJmcmVwbGF5JTJmT05WSUYtUmVwbGF5Q29udHJvbC1TZXJ2aWNlLVNwZWMtdjI0MS5wZGYfEAICFgIfEQX9AXJldHVybiBkbm5Nb2RhbC5zaG93KCdodHRwOi8vd3d3Lm9udmlmLm9yZy9sb2dpbi5hc3B4P1JldHVyblVybD0lMjUyZmhvbWUuYXNweCUyNTNmNDA0JTI1M2JodHRwJTI1M2ElMjUyZiUyNTJmd3d3Lm9udmlmLm9yZyUyNTNhODAlMjUyZnNwZWNzJTI1MmZzcnYlMjUyZnJlcGxheSUyNTJmT05WSUYtUmVwbGF5Q29udHJvbC1TZXJ2aWNlLVNwZWMtdjI0MS5wZGYmcG9wVXA9dHJ1ZScsLypzaG93UmV0dXJuKi90cnVlLDMwMCw2NTAsdHJ1ZSwnJylkGAEFJmRubiRjdHI3NTUkRE5OS25vd2xlZGdlYmFzZSRjdGwwMCRndlBSDzwrAAoBCAIBZIb3hNSmPnEMHB8Pp86RZQ18buvz" />
+</div>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d3.5.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3aeb198dbd-2212-44f6-bb15-882bde414f00%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwK7ve6nDgL+5PGyAgLR9YnYDt0Gw4MhlfXbMbQsDqC9XfTShjKc" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', document.getElementById('cse-search-box'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+        <script src="/js/dnn.modalpopup.js?cdv=33" type="text/javascript"></script><script src="/js/dnncore.js?cdv=33" type="text/javascript"></script>
+        
+        
+
+
+
+<script>
+window.onload = function () {
+	function soporte_video() {
+		return !!document.createElement('video').canPlayType;
+	}
+
+	if (soporte_video()){
+		document.getElementById('tdvideo').innerHTML = '<video src="/Portals/_default/Skins/onvif/209413_ONVIF_Video_fnl.mp4" controls loop preload="none" width="985" height="554" poster="/Portals/_default/Skins/onvif/images/banner-new-1.jpg"></video>';
+	} else {
+		document.getElementById('tdvideo').innerHTML = '<img src="/Portals/_default/Skins/onvif/images/banner-new-1.jpg" width="985" height="554" alt="" />';
+	}
+}
+	/*window.onload = function () {
+		if (Modernizr.video) {
+			document.getElementById('tdvideo').innerHTML = '<video src="/Portals/_default/Skins/onvif/209413_ONVIF_Video_fnl.mp4" controls loop preload="none" width="985" height="554" poster="/Portals/_default/Skins/onvif/images/banner-new-1.jpg"></video>';
+		} else {
+			document.getElementById('tdvideo').innerHTML = '<img src="/Portals/_default/Skins/onvif/images/banner-new-1.jpg" width="985" height="554" alt="" />';
+		}
+	}*/
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="main_page_new">
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="top"><table width="999" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="left" valign="top"><table width="975" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="3" align="center" valign="top">
+          <img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="1" height="30" /></td>
+            </tr>
+          <tr>
+            <td align="left" valign="top"><a href="http://www.onvif.org"><img src="/Portals/_default/Skins/onvif/images/logo-new.jpg" border="0"/></a></td>
+            <td align="left" valign="bottom"></td>
+            <td align="left" valign="bottom"><table width="223" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="right" valign="top"><table border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="right" valign="middle"><a href="http://www.linkedin.com/groups?mostPopular=&gid=2120262" target="_blank"><img src="/Portals/_default/Skins/onvif/images/linkedin.png" border="0" /></a>&nbsp;&nbsp;<a href="http://twitter.com/ONVIF" target="_blank"><img src="/Portals/_default/Skins/onvif/images/twitter.png" width="32" height="32" border="0" /></a>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="13" height="20" /></td>
+      </tr>
+    </table></td>
+  </tr>
+                         <tr>                          
+                           <td id="dnn_searchpane" align="right" valign="middle"><div class="DnnModule DnnModule-LibertytecGCSSearch DnnModule-496"><a name="496"></a>
+<link href="/Portals/_default/Containers/onvif_containers/Container.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="0" align="left" valign="middle"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td id="dnn_ctr496_ContentPane" align="center" valign="top"><!-- Start_Module_496 --><div id="dnn_ctr496_ModuleContent" class="DNNModuleContent ModLibertytecGCSSearchC">
+	<div id="dnn_ctr496_LibertytecGCS_Search_divNormalSearch">
+    <script type="text/javascript">
+    function searchSite()   
+    {
+        var cx = '014517973702195824510:xviptlsqaba';
+        var cof = 'FORID:9';
+        var navURL = '/Home/Searchresults.aspx';
+        var finalURL = navURL + '?cx=' + cx + '&cof=' + cof + '&ie=UTF-8&q=' + encodeURIComponent(document.getElementById('q').value);
+        document.location.href = finalURL;
+    }
+    </script>
+
+    
+        <div class="cse-branding-form">
+            <input type="text" name="q" id="q" style="width:200px;" onkeydown="return __dnn_KeyDown('13', 'javascript:searchSite()', event);"/>
+            <input type="button" name="sa" onclick="searchSite()" value="Search" /> 
+        </div>           
+        <div class="cse-branding-logo">
+            
+        </div>
+        <div class="cse-branding-text">
+            
+        </div>	    
+    
+    <span id="dnn_ctr496_LibertytecGCS_Search_spScript">
+        <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+    </span>
+</div>
+
+
+</div><!-- End_Module_496 --></td>
+
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/Portals/_default/Containers/onvif_containers/images/spacer.gif" alt="" width="1" height="5" /></td>
+  </tr>
+</table>
+
+
+
+
+</div></td>
+
+                        </tr>
+</table>
+</td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center" valign="top"><img src="/Portals/_default/Skins/onvif/images/spacer.gif" height="5" /></td>
+            </tr>
+          
+        </table>		</td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><table width="999" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="5"></td>
+            <td background="/Portals/_default/Skins/onvif/images/shadow_top.png" style="background-repeat:repeat-x;"></td>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td width="5" background="/Portals/_default/Skins/onvif/images/shadow_left.png" style="background-repeat:repeat-y;"></td>
+            <td class="box_bor"><table width="985" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+      <td height="43" valign="middle" bgcolor="#070908"><table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                
+                <td align="left"><span><TABLE CLASS="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmbar dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar"><TR><TD><a style="text-decoration: none;" href="http://www.onvif.org/Home.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle MainMenu_BreadcrumbActive">Home</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/About/Organization.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">About</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/About/Organization.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Organization</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/About/FAQ.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;FAQ</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/About/MemberList.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Member&nbsp;List</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/Membership/BecomeaMember.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">Join</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Membership/MembershipLevels.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Membership&nbsp;Levels</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Join/WhyJoin.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Why&nbsp;Join?</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Membership/BecomeaMember.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Become&nbsp;a&nbsp;Member</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/NewsEvents/PressReleases.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">News&nbsp;&&nbsp;Events</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/NewsEvents/PressReleases.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Press&nbsp;Releases</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/NewsEvents/InTheNews.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;In&nbsp;The&nbsp;News</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/NewsEvents/UpcomingEvents.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Upcoming&nbsp;Events</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/NewsEvents/Newsletters.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Newsletters</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/Documents/Specifications.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">Resources</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Resources/WhitePapers.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;White&nbsp;Papers</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Documents/Specifications.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Specifications</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Resources/Videos.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Videos</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Resources/Training.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Training</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/FindaProduct/ProfileS.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">Find&nbsp;a&nbsp;Product</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/FindaProduct/ProfileProducts.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Profile&nbsp;Products</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/FindaProduct/ArchivedProducts.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Archived&nbsp;Products</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://www.onvif.org/Contact/ContactDetails.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">Contact</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Contact/ContactDetails.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Contact&nbsp;Details</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.onvif.org/Contact/InterestListSignup.aspx" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Interest&nbsp;List&nbsp;Signup</font></a><br><span class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar" title=""></span><br><a style="text-decoration: none;" href="http://developer.onvif.org" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_Idle">Members&nbsp;Area</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://developer.onvif.org" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Developer&nbsp;Forum</font></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="text-decoration: none;" href="http://www.wush.net/trac/onvif" title=""><font class="dnn_dnnsolpartmenu_ctldnnsolpartmenu_spmitm MainMenu_MenuItem CSSubMenuItemOff MainMenu_MenuBar MainMenu_SubMenu CSSubMenuItemBGOff">&nbsp;Working&nbsp;Group&nbsp;Platform</font></a><br></TD></TR></TABLE></span></td>
+              </tr>
+            </table></td>
+              </tr>
+              <tr>
+                <td height="1" valign="top" bgcolor="#FFFFFF">				</td>
+              </tr>
+              <tr>
+				<td id="tdvideo" height="554" align="center" valign="top"><video src="/Portals/_default/Skins/onvif/209413_ONVIF_Video_fnl.mp4" controls loop preload="none" width="985" height="554" poster="/Portals/_default/Skins/onvif/images/banner-new-1.jpg"></video></td>
+              </tr>
+              <tr>
+                <td valign="top"><table width="985" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="210" valign="top" > <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="dnn_LeftPane" width="210" style="padding-top: 10px;"><div class="DnnModule DnnModule-Knowledgebase DnnModule-755"><a name="755"></a>
+
+<div id="container02">
+  <div id="container02title">
+  <span id="dnn_ctr755_dnnTITLE_titleLabel" class="cont02_title_new">Latest News</span>
+
+
+</div>
+  <div id="dnn_ctr755_ContentPane" class="mid-p"><!-- Start_Module_755 --><div id="dnn_ctr755_ModuleContent" class="DNNModuleContent ModKnowledgebaseC">
+	
+<link href="module.css" type="text/css" rel="stylesheet" />
+<link href="cut01.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+	function popUp(url, width, height) {
+		var intWidth=1220;
+		var intHeight=690;
+		var x='/DesktopModules/Knowledgebase/ADMIN/KbManageCategory.aspx?PortalID=0';
+	    if(width > 0) intWidth = width;
+		if(height > 0) intHeight = height;
+
+		var winPopUp = window.open(x + url,'popup','width=' + intWidth + ',height=' + intHeight + ',scrollbars,resizable,left=30,top=45');
+
+		if(typeof window.focus != 'undefined') javascript: winPopUp.focus();
+	}
+
+	function popUp2(url, width, height) {
+		var intWidth=1000;
+		var intHeight=690;
+		var x='/DesktopModules/Knowledgebase/ADMIN/KbManagaIUCategories.aspx?PortalID=0';
+		if(width > 0) intWidth = width;
+		if(height > 0) intHeight = height;
+
+		var winPopUp = window.open(x + url,'popup','width=' + intWidth + ',height=' + intHeight + ',scrollbars,resizable,left=30,top=45');
+
+		if(typeof window.focus != 'undefined') javascript: winPopUp.focus();
+	}
+</script>
+	<table cellspacing="0" cellpadding="0" width="100%" border="0">
+		<tr>
+			<td class="standardfont1" valign="top">
+				
+		        </td>
+		        
+		</tr>
+		<tr>
+			<td style="width:100%">
+				<div id="dnn_ctr755_DNNKnowledgebase_Panel2">
+		
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+       
+    <tr>
+        <td>
+            <div>
+			<table cellspacing="0" border="0" id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR" style="border-width:0px;width:100%;border-collapse:collapse;">
+				<tr>
+					<td>
+                            <table>
+                                <tr>
+                              
+                                  <td style="padding-right:4px;" valign="top" >
+                                   <img id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl02_imgBullet" src="DesktopModules/Knowledgebase/images1/bullet.gif" style="border-width:0px;" /> 
+                                  </td>
+                                    <td >
+                                        
+                                        <a id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl02_hypLink" class="arial_12_leftlink" href="http://www.onvif.org/Default.aspx?Contenttype=ArticleDet&amp;tabID=110&amp;moduleId=487&amp;Aid=90&amp;PR=PR" style="font-size:12px;">ONVIF to Exhibit at 60th Annual ASIS International Seminar and Exhibition</a>
+                                          
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+				</tr><tr>
+					<td>
+                            <table>
+                                <tr>
+                              
+                                  <td style="padding-right:4px;" valign="top" >
+                                   <img id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl03_imgBullet" src="DesktopModules/Knowledgebase/images1/bullet.gif" style="border-width:0px;" /> 
+                                  </td>
+                                    <td >
+                                        
+                                        <a id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl03_hypLink" class="arial_12_leftlink" href="http://www.onvif.org/Default.aspx?Contenttype=ArticleDet&amp;tabID=110&amp;moduleId=487&amp;Aid=89&amp;PR=PR" style="font-size:12px;">ONVIF Grows With Members on Six Continents</a>
+                                          
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+				</tr><tr>
+					<td>
+                            <table>
+                                <tr>
+                              
+                                  <td style="padding-right:4px;" valign="top" >
+                                   <img id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl04_imgBullet" src="DesktopModules/Knowledgebase/images1/bullet.gif" style="border-width:0px;" /> 
+                                  </td>
+                                    <td >
+                                        
+                                        <a id="dnn_ctr755_DNNKnowledgebase_ctl00_gvPR_ctl04_hypLink" class="arial_12_leftlink" href="http://www.onvif.org/Default.aspx?Contenttype=ArticleDet&amp;tabID=110&amp;moduleId=487&amp;Aid=88&amp;PR=PR" style="font-size:12px;">ONVIF to Host Public Interoperability Demonstration and Reception at Security Essen</a>
+                                          
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+				</tr>
+			</table>
+		</div>
+        </td>
+    </tr>
+</table>
+
+	</div>
+			</td>
+		</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" align="center">
+	
+</table>
+</div><!-- End_Module_755 --></div>
+</div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-750"><a name="750"></a>
+
+<div id="container02">
+  <div id="container02title">
+  <span id="dnn_ctr750_dnnTITLE_titleLabel" class="cont02_title_new">Upcoming Events</span>
+
+
+</div>
+  <div id="dnn_ctr750_ContentPane" class="mid-p"><!-- Start_Module_750 --><div id="dnn_ctr750_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr750_HtmlModule_lblContent" class="Normal">
+	<strong>Annual Meeting Webinar</strong><br />
+October 28, 2014<br />
+<a target="_blank" href="http://developer.onvif.org/showthread.php?736-ONVIF-Annual-Meeting-Webinar-Event-Details-amp-Registration">Register Today</a><br />
+<br />
+<strong>Technical F2F Meetings</strong><br />
+November 18-21, 2014<br />
+Pelco by Schneider Electric Offices<br />
+Ft. Collins, CO<br />
+<br />
+<a href="/NewsEvents/UpcomingEvents.aspx">More Events ..</a>
+</div>
+
+</div><!-- End_Module_750 --></div>
+</div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-790"><a name="790"></a>
+
+<div id="container02">
+  <div id="container02title">
+  <span id="dnn_ctr790_dnnTITLE_titleLabel" class="cont02_title_new">Multimedia</span>
+
+
+</div>
+  <div id="dnn_ctr790_ContentPane" class="mid-p"><!-- Start_Module_790 --><div id="dnn_ctr790_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr790_HtmlModule_lblContent" class="Normal">
+	<strong>IFSEC 2013 Birmingham</strong><br />
+<a target="_blank" href="/portals/0/documents/presentations/ONVIF%20IFSEC2013.ppsx">Watch Video</a><br />
+<br />
+<strong>ONVIF Brochure</strong><br />
+<a target="_blank" href="/portals/0/documents/marketing/209413_Onvif_Brochure.pdf">Download</a><br />
+<br />
+<strong>ONVIF Profile Overview</strong><br />
+<a target="_blank" href="/portals/0/documents/marketing/209413_Onvif_Profile_Overview.pdf">Download</a>
+</div>
+
+</div><!-- End_Module_790 --></div>
+</div>
+</div></td>
+
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table></td>
+                    <td width="5"><img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="20" /></td>
+                    <td valign="top" width="750" >
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"  ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="dnn_MidPane1" valign="top"><div class="DnnModule DnnModule-DNN_HTML DnnModule-748"><a name="748"></a>
+<link href="/Portals/_default/Containers/onvif_containers/Container.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="0" align="left" valign="middle"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td id="dnn_ctr748_ContentPane" align="center" valign="top"><!-- Start_Module_748 --><div id="dnn_ctr748_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr748_HtmlModule_lblContent" class="Normal">
+	<p class="blue-big">ONVIF is an open industry forum for the development of a global standard for the interface of IP-based physical security products.</p>
+<p>ONVIF is committed to the adoption of IP in the security market. The ONVIF specification will ensure interoperability between products regardless of manufacturer. The cornerstones of ONVIF are:</p>
+<ul>
+    <li>Standardization of communication between IP-based physical security</li>
+    <li>Interoperability between IP-based physical security products regardless of manufacturer</li>
+    <li>Open to all companies and organizations</li>
+</ul>
+<p>The ONVIF specification defines a common protocol for the exchange of information between network video devices including automatic device discovery, video streaming and intelligence metadata.<br />
+<br />
+<a href="/About/Benefits.aspx">&nbsp;ONVIF for End Users</a>&nbsp; | <a href="/About/Benefits.aspx">ONVIF for Integrators</a> | <a href="/About/Benefits.aspx">ONVIF for Manufacturers</a></p>
+</div>
+
+</div><!-- End_Module_748 --></td>
+
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/Portals/_default/Containers/onvif_containers/images/spacer.gif" alt="" width="1" height="5" /></td>
+  </tr>
+</table>
+
+
+
+
+</div></td>
+
+        <td id="dnn_MidPane2" valign="top" class="DNNEmptyPane"></td>
+
+        <td id="dnn_MidPane3" valign="top" class="DNNEmptyPane"></td>
+
+      </tr>
+    </table></td>
+  </tr>
+    <tr>
+    <td > <img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="5" height="20" /></td>
+  </tr>
+  <tr>
+    <td id="dnn_ContentPane" class="DNNEmptyPane"></td>
+
+  </tr>
+   <tr>
+    <td > <img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="5" height="20" /></td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="dnn_BottomPane1" valign="top" width="33%"><div class="DnnModule DnnModule-DNN_HTML DnnModule-751"><a name="751"></a>
+<link href="/Portals/_default/Containers/onvif_cont-new/Container.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="0" align="left" valign="middle"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td id="dnn_ctr751_ContentPane" align="center" valign="top"><!-- Start_Module_751 --><div id="dnn_ctr751_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr751_HtmlModule_lblContent" class="Normal">
+	<img alt="" width="216" height="223" src="/portals/0/profile-s.png" style="vertical-align: middle;" />
+<br />
+<span class="blue-small">Profile S</span>
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td colspan="2">for IP-based video systems</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Video &amp; audio streaming</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Pan-tilt-zoom control &amp; relay output</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Video configuration &amp; multicast</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</div><!-- End_Module_751 --></td>
+
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/Portals/_default/Containers/onvif_cont-new/images/spacer.gif" alt="" width="1" height="5" /></td>
+  </tr>
+</table>
+
+
+
+
+</div></td>
+
+    <td id="dnn_BottomPane2" valign="top" width="33%"><div class="DnnModule DnnModule-DNN_HTML DnnModule-752"><a name="752"></a>
+<link href="/Portals/_default/Containers/onvif_cont-new/Container.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="0" align="left" valign="middle"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td id="dnn_ctr752_ContentPane" align="center" valign="top"><!-- Start_Module_752 --><div id="dnn_ctr752_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr752_HtmlModule_lblContent" class="Normal">
+	<img alt="" width="216" height="223" style="vertical-align: middle;" src="/portals/0/profile-c.png" />
+<br />
+<span class="blue-small">Profile C</span>
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td colspan="2">for IP-based access control</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Site info &amp; configuration&lt;</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Event &amp; alarm management</td>
+        </tr>
+        <tr>
+            <td><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td>Door access control</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</div><!-- End_Module_752 --></td>
+
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/Portals/_default/Containers/onvif_cont-new/images/spacer.gif" alt="" width="1" height="5" /></td>
+  </tr>
+</table>
+
+
+
+
+</div></td>
+
+	<td id="dnn_BottomPane3" valign="top" width="33%"><div class="DnnModule DnnModule-DNN_HTML DnnModule-753"><a name="753"></a>
+<link href="/Portals/_default/Containers/onvif_cont-new/Container.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="0" align="left" valign="middle"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td id="dnn_ctr753_ContentPane" align="center" valign="top"><!-- Start_Module_753 --><div id="dnn_ctr753_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr753_HtmlModule_lblContent" class="Normal">
+	<img alt="" width="216" height="223" src="/portals/0/profile-g.png" style="vertical-align: middle;" />
+<br />
+<span class="blue-small">Profile G</span>
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td colspan="2">for edge storage and retrieval</td>
+        </tr>
+        <tr>
+            <td valign="top"><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td valign="top">Configure, request and control recording from conformant devices&lt;</td>
+        </tr>
+        <tr>
+            <td valign="top"><img alt="" src="/portals/0/images/bullet-gray.jpg" /></td>
+            <td valign="top">Receive audio &amp; metadata stream</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</div><!-- End_Module_753 --></td>
+
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/Portals/_default/Containers/onvif_cont-new/images/spacer.gif" alt="" width="1" height="5" /></td>
+  </tr>
+</table>
+
+
+
+
+</div></td>
+
+  </tr>
+   <tr>
+    <td > <img src="/Portals/_default/Skins/onvif/images/spacer.gif" height="5" /></td>
+  </tr>
+</table></td>
+  </tr>
+</table></td>
+                    </tr>
+                   </table></td>
+              </tr>
+              <tr>
+                <td height="10" valign="top"></td>
+              </tr>
+            </table>
+            <td width="5" background="/Portals/_default/Skins/onvif/images/shadow_right.png" style="background-repeat:repeat-y;"></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+            <td background="/Portals/_default/Skins/onvif/images/shadow_bottom.png" style="background-repeat:repeat-x;"></td>
+            <td height="5"></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top"><img src="/Portals/_default/Skins/onvif/images/spacer.gif" width="5" height="10" /></td>
+       </tr>
+      <tr>
+        <td valign="middle" class="fotterbg" ><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="center" valign="top" class="arial_11_link" ><table width="970" border="0" align="center" cellpadding="0" cellspacing="3">
+          <tr>
+             <td align="left" class="login_norm"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="login_norm">Copyright 2014 ONVIF.</span>
+</td>
+          </tr>
+          <tr>
+            <td align="left" ><span id="dnn_dnnLINKS_lblLinks"><a class="fotter_link" href="http://www.onvif.org/Home.aspx">Home</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/About/Organization.aspx">About</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/Membership/BecomeaMember.aspx">Join</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/NewsEvents/PressReleases.aspx">News & Events</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/Documents/Specifications.aspx">Resources</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/FindaProduct/ProfileS.aspx">Find a Product</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://www.onvif.org/Contact/ContactDetails.aspx">Contact</a><span class="fotter_link">   |   </span><a class="fotter_link" href="http://developer.onvif.org">Members Area</a></span>
+ </td>
+          </tr>
+          <tr>
+            <td align="left" class="login_norm" ><a href="/Home/Privacy.aspx" target="_self" class="LOGIN" >Privacy Statement</a>			  <span class="calibri14wht_bld">&nbsp;|&nbsp;</span><a href="/Home/Terms.aspx" target="_self" class="LOGIN">Terms of Use</a> <span class="calibri14wht_bld">&nbsp;|&nbsp;</span> <a href="http://www.inventures.com/" class="LOGIN" target="_blank">Alliance Management by Inventures</a><span class="calibri14wht_bld">&nbsp;|&nbsp;</span>
+              <a id="dnn_dnnLOGIN_loginLink" title="Login" class="LOGIN" onclick="return dnnModal.show('http://www.onvif.org/login.aspx?ReturnUrl=%252fhome.aspx%253f404%253bhttp%253a%252f%252fwww.onvif.org%253a80%252fspecs%252fsrv%252freplay%252fONVIF-ReplayControl-Service-Spec-v241.pdf&amp;popUp=true',/*showReturn*/true,300,650,true,'')" href="http://www.onvif.org/login.aspx?ReturnUrl=%2fhome.aspx%3f404%3bhttp%3a%2f%2fwww.onvif.org%3a80%2fspecs%2fsrv%2freplay%2fONVIF-ReplayControl-Service-Spec-v241.pdf">Login</a>
+<!--close loginGroup--> </td></tr>
+        </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        
+        //This code is to force a refresh of browser cache
+        //in case an old version of dnn.js is loaded
+        //It should be removed as soon as .js versioning is added
+        jQuery(document).ready(function () {
+            if (navigator.userAgent.indexOf(" Chrome/") == -1) {
+                if ((typeof dnnJscriptVersion === 'undefined' || dnnJscriptVersion !== "6.0.0") && typeof dnn !== 'undefined') {
+                    window.location.reload(true);
+                }
+            }
+        });
+         //]]>
+    </script>
+</body>
+</html>
